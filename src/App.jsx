@@ -1,32 +1,39 @@
 import "./App.css";
-import AssignmentsComponent from "./components/AssignmentsComponent";
-import DashboardComponent from "./components/DashboardComponent";
+import SidebarComponent from './components/SidebarComponent';
+import LearningMasteriralComponent from './components/LearningMaterialsComponent';
+import TopNavbarComponent from './components/TopNavbarComponent';
+import DashboardComponent from './components/DashboardComponent';
 import LearningMaterialsComponent from "./components/LearningMaterialsComponent";
-import SidebarComponent from "./components/SidebarComponent";
-import TopNavbarComponent from "./components/TopNavbarComponent";
-
+import AddNewProjectComponent from "./components/AddNewProjectComponent";
+import FilterComponent from "./components/FilterComponent";
+import CardComponent from "./components/CardComponent";
 function App() {
   return (
     <>
-      <div className="font-rubik text-primary-text bg-light-gray flex h-screen overflow-hidden">
-        {/* sidebar */}
-        <div className="w-1/5">
+      <div class="grid grid-cols-12 w-full">
+        <div class="col-span-3 bg-amber-300">
           <SidebarComponent />
         </div>
+        <div class="col-span-9 bg-amber-950 w-full p-5">
+          <TopNavbarComponent  />
 
-        {/* top navigation bar */}
-        <div className="w-4/5 p-12">
-          <TopNavbarComponent />
-
-          {/* dashboard summary */}
-          <div className="flex justify-between">
-            <div className="w-9/12 mt-5 space-y-5">
+          <div class="grid grid-cols-12 w-full bg-amber-600">
+            <div class="col-span-9 bg-blue-500 h-5">
               <DashboardComponent />
-              <AssignmentsComponent />
-            </div>
+              <div class="flex justify-between align-center m-5">
+                <div>
+                  Assignments
+                </div>
+                <div>
+                  <AddNewProjectComponent />
+                </div>
+              </div>
+              
+              <CardComponent />
 
-            <div className="w-3/12 pl-10 mt-5">
-              <LearningMaterialsComponent />
+            </div>
+            <div class="col-span-3 bg-amber-200">
+              <LearningMasteriralComponent />
             </div>
           </div>
         </div>
