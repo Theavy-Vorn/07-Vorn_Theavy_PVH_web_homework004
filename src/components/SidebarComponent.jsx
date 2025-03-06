@@ -2,6 +2,7 @@ import React from "react";
 import { sidebarList } from "../data/sidebarList";
 import { LogOutIcon } from "lucide-react";
 
+
 export default function SidebarComponent() {
   return (
     <div className="p-5 h-screen bg-white shadow-xl">
