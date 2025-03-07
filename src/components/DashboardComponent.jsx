@@ -8,8 +8,8 @@ export default function DashboardComponent() {
 
       {/* display summary on each card */}
       <div className="flex items-center gap-2">
-      {dashboard.map((task) => 
-        <div className="flex flex-row gap-5">
+      {dashboard.map((task, index) => 
+        <div className="flex flex-row gap-5" key={index}>
           <div className="flex bg-white gap-5 py-3.5 px-4 rounded-xl w-auto">
             <div className= {`p-3 rounded-xl ${task.color}`} >
               <img src={task. icon} alt="file icon" />

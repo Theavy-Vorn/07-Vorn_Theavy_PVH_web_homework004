@@ -1,7 +1,18 @@
 import { EllipsisVertical } from "lucide-react";
-import React from "react";
+import React, { useState } from "react";
 
 export default function CardComponent() {
+  const [inputs, setInputs] = useState(0);
+  const handleChange = (event) => {
+    const name = event.target.name;
+    const value = event.target.value;
+    setInputs(values => ({...values, [name]: value}))
+  }
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    alert(inputs);
+  }
   return (
     <div>
       <div className="max-w-sm p-6 bg-white rounded-2xl shadow-sm dark:bg-gray-800 dark:border-gray-700">

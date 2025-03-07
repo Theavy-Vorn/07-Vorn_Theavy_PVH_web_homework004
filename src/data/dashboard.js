@@ -28,4 +28,11 @@ export const dashboard = [
     label: "Upcoming",
     color: "bg-custom-yellow",
   },
+  {
+    id: 5,
+    icon: "/fi-sr-file.svg",
+    totalTasks: 25,
+    label: "Upcoming",
+    color: "bg-custom-yellow",
+  },
 ];
